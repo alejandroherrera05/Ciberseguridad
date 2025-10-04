@@ -70,175 +70,80 @@
               "width": 830,
               "height": 160
             },
-            "visible": true,
-            "shape": "trust-boundary-box",
-            "id": "497a2476-58d4-4c17-929c-b5305db5ca6a",
-            "zIndex": -1,
-            "data": {
-              "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            }
-          },
-          {
-            "position": {
-              "x": 179.99999999999898,
-              "y": 210.00000000000193
-            },
-            "size": {
-              "width": 830,
-              "height": 380
-            },
-            "visible": true,
-            "shape": "trust-boundary-box",
-            "id": "221876e6-8fb7-4651-b9aa-79537d9661ac",
-            "zIndex": -1,
-            "data": {
-              "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            }
-          },
-          {
-            "position": {
-              "x": 179.99999999999886,
-              "y": 590.0000000000023
-            },
-            "size": {
-              "width": 830,
-              "height": 440
-            },
-            "visible": true,
-            "shape": "trust-boundary-box",
-            "id": "fb7b90be-49f5-4231-9c61-941ce20989d3",
-            "zIndex": -1,
-            "data": {
-              "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            }
-          },
-          {
-            "position": {
-              "x": 442.5,
-              "y": 85.00000000000114
-            },
-            "size": {
-              "width": 112.5,
-              "height": 60
-            },
             "attrs": {
-              "text": {
-                "text": "Field Area"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
+              "label": {
+                "text": "Cloud Platform"
               }
             },
             "visible": true,
-            "shape": "actor",
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "8fe8fbf0-fe95-4ddd-8e6c-7a58d38d029a"
-                },
-                {
-                  "group": "right",
-                  "id": "141f5f34-7d30-4e01-8d8d-fe409739709c"
-                },
-                {
-                  "group": "bottom",
-                  "id": "beefaf37-aad0-4553-8337-8e1865726cd7"
-                },
-                {
-                  "group": "left",
-                  "id": "87e09ddd-fabe-4738-9fea-865e36fd883c"
-                }
-              ]
-            },
-            "id": "6e49325e-c84c-4c27-8347-9e4aea8027f7",
-            "zIndex": 1,
+            "shape": "trust-boundary-box",
+            "zIndex": -1,
+            "id": "497a2476-58d4-4c17-929c-b5305db5ca6a",
             "data": {
-              "type": "tm.Actor",
+              "type": "tm.BoundaryBox",
+              "name": "Cloud Platform",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
+          },
+          {
+            "position": {
+              "x": 179.99999999999977,
+              "y": 800.0000000000023
+            },
+            "size": {
+              "width": 830,
+              "height": 270
+            },
+            "attrs": {
+              "label": {
+                "text": "Field Area"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "zIndex": -1,
+            "id": "fb7b90be-49f5-4231-9c61-941ce20989d3",
+            "data": {
+              "type": "tm.BoundaryBox",
               "name": "Field Area",
-              "description": "Área física del cultivo",
-              "isTrustBoundary": false,
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "providesAuthentication": false,
-              "threats": []
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 179.99999999999977,
+              "y": 210.00000000000324
+            },
+            "size": {
+              "width": 830,
+              "height": 590
+            },
+            "attrs": {
+              "label": {
+                "text": " Gateway Area "
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "3a5fa7c8-a867-4ff0-b1f1-54be75cb5063",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": " Gateway Area ",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
             }
           },
           {
@@ -262,6 +167,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -345,7 +251,6 @@
               ]
             },
             "id": "c4e61f08-dc8c-4832-8f5f-ee0c7988f7e9",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Gateway",
@@ -377,8 +282,8 @@
           },
           {
             "position": {
-              "x": 820,
-              "y": 300
+              "x": 326.25,
+              "y": 85.00000000000324
             },
             "size": {
               "width": 160,
@@ -396,6 +301,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -479,7 +385,6 @@
               ]
             },
             "id": "df4f6f3e-0b51-4f6d-9756-95d5743af899",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
               "name": "aplicación móvil",
@@ -525,8 +430,8 @@
           },
           {
             "position": {
-              "x": 830,
-              "y": 470
+              "x": 620,
+              "y": 95.00000000000324
             },
             "size": {
               "width": 150,
@@ -544,6 +449,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -627,7 +533,6 @@
               ]
             },
             "id": "73df68f3-acdc-4267-976a-14dd460642e1",
-            "zIndex": 4,
             "data": {
               "type": "tm.Actor",
               "name": "SIstema central \nalojado en la nube",
@@ -639,97 +544,6 @@
               "providesAuthentication": false,
               "threats": []
             }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "HTTPS",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "61d4413b-83f0-43cb-8e92-feb61c6692aa",
-                  "title": "Exposición de tokens o sesiones en HTTPS  ",
-                  "status": "Open",
-                  "severity": "TBD",
-                  "type": "Information disclosure / Brecha de información",
-                  "description": "Cookies o tokens sin flags seguros, TLS mal configurado o sesiones largas.",
-                  "mitigation": "C04 TLS fuerte; cookies HttpOnly/Secure/SameSite; expiración corta y rotación de tokens; detección de anomalías.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 12,
-                  "score": "7"
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 1,
-                "denialOfService": 0
-              }
-            },
-            "labels": [
-              "HTTPS"
-            ],
-            "id": "e8b11bdf-2138-4101-8a6b-70b687ec63dc",
-            "source": {
-              "cell": "c4e61f08-dc8c-4832-8f5f-ee0c7988f7e9",
-              "port": "f66dc41e-6627-4045-9bcd-f17358ea8cd0"
-            },
-            "target": {
-              "cell": "df4f6f3e-0b51-4f6d-9756-95d5743af899",
-              "port": "87e09ddd-fabe-4738-9fea-865e36fd883c"
-            },
-            "vertices": [
-              {
-                "x": 620,
-                "y": 380
-              },
-              {
-                "x": 640,
-                "y": 380
-              },
-              {
-                "x": 690,
-                "y": 400
-              },
-              {
-                "x": 690,
-                "y": 370
-              },
-              {
-                "x": 720,
-                "y": 350
-              },
-              {
-                "x": 820,
-                "y": 350
-              }
-            ]
           },
           {
             "shape": "flow",
@@ -824,161 +638,6 @@
               {
                 "x": 696,
                 "y": 840
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "red",
-                "strokeWidth": 2.5,
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "MQTT/TLS",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": true,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [
-                {
-                  "id": "5cfd6a07-afb3-4bcf-897b-0f16dbd2f665",
-                  "title": "Exposición de datos en el backhaul MQTT (TLS débil)",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Information disclosure / Brecha de información",
-                  "description": "Certificados inválidos o versiones TLS obsoletas permiten MITM.",
-                  "mitigation": "C04 TLS 1.3 estricto, mTLS, pinning de CA/hostname, rotación de credenciales.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 10,
-                  "score": "8"
-                },
-                {
-                  "id": "22102557-e088-47ab-97f0-ef9dccfa9289",
-                  "title": "Saturación al broker MQTT",
-                  "status": "Open",
-                  "severity": "High",
-                  "type": "Denial of service / Denegación de servicio",
-                  "description": "Flood de publicaciones/QoS abusivo, uso de retained para degradar servicio.",
-                  "mitigation": "C05 rate-limit, quotas, ACL por tópico, HA/cluster, detección de anomalías.",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 11,
-                  "score": "8"
-                }
-              ],
-              "threatFrequency": {
-                "tampering": 0,
-                "informationDisclosure": 1,
-                "denialOfService": 1
-              }
-            },
-            "labels": [
-              "MQTT/TLS"
-            ],
-            "id": "e58085d7-82d2-4334-aaba-8620e174d804",
-            "source": {
-              "cell": "c4e61f08-dc8c-4832-8f5f-ee0c7988f7e9",
-              "port": "f66dc41e-6627-4045-9bcd-f17358ea8cd0"
-            },
-            "target": {
-              "cell": "73df68f3-acdc-4267-976a-14dd460642e1",
-              "port": "87e09ddd-fabe-4738-9fea-865e36fd883c"
-            },
-            "vertices": [
-              {
-                "x": 670,
-                "y": 440
-              },
-              {
-                "x": 730,
-                "y": 500
-              },
-              {
-                "x": 790,
-                "y": 500
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              ""
-            ],
-            "id": "a7f952cb-e369-4ef0-a84f-1f9e989e8f5f",
-            "source": {
-              "cell": "6e49325e-c84c-4c27-8347-9e4aea8027f7",
-              "port": "beefaf37-aad0-4553-8337-8e1865726cd7"
-            },
-            "target": {
-              "cell": "c4e61f08-dc8c-4832-8f5f-ee0c7988f7e9",
-              "port": "a228deb0-d6a5-40bb-98c5-fc7c70f27e6b"
-            },
-            "vertices": [
-              {
-                "x": 460,
-                "y": 190
-              },
-              {
-                "x": 460,
-                "y": 260
-              },
-              {
-                "x": 570,
-                "y": 280
-              },
-              {
-                "x": 517.5,
-                "y": 240
               }
             ]
           },
@@ -1232,6 +891,173 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "b315bd65-8482-41b3-b3df-1cbd1adecf07",
+                  "title": "Exposición de tokens o sesiones en HTTPS",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service / Denegación de servicio",
+                  "description": "Cookies o tokens sin flags seguros, TLS mal configurado o sesiones largas.",
+                  "mitigation": "C04 TLS fuerte; cookies HttpOnly/Secure/SameSite; expiración corta y rotación de tokens; detección de anomalías",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 24,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
+            },
+            "labels": [
+              "HTTPS"
+            ],
+            "id": "95bc33b6-2e78-4d7a-a8f1-312f3169bf25",
+            "source": {
+              "cell": "df4f6f3e-0b51-4f6d-9756-95d5743af899",
+              "port": "beefaf37-aad0-4553-8337-8e1865726cd7"
+            },
+            "target": {
+              "cell": "c4e61f08-dc8c-4832-8f5f-ee0c7988f7e9",
+              "port": "a228deb0-d6a5-40bb-98c5-fc7c70f27e6b"
+            },
+            "vertices": [
+              {
+                "x": 406.25,
+                "y": 260
+              },
+              {
+                "x": 440,
+                "y": 260
+              },
+              {
+                "x": 470,
+                "y": 280
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "MQTT/TLS",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "27ed92fc-ccd0-4c16-8a68-9d666ad0667f",
+                  "title": "Exposición de datos en el backhaul MQTT (TLS débil)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Certificados inválidos o versiones TLS obsoletas permiten MITM.",
+                  "mitigation": "C04 TLS 1.3 estricto, mTLS, pinning de CA/hostname, rotación de credenciales.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 25,
+                  "score": "8"
+                },
+                {
+                  "id": "b54344ee-4518-4517-83cd-c9507855f25a",
+                  "title": "Saturación al broker MQTT",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service / Denegación de servicio",
+                  "description": "Flood de publicaciones/QoS abusivo, uso de retained para degradar servicio.",
+                  "mitigation": "C05 rate-limit, quotas, ACL por tópico, HA/cluster, detección de anomalías",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 26,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
+            },
+            "labels": [
+              "MQTT/TLS"
+            ],
+            "id": "a12379ca-1ff8-40c9-8f71-7e9a11d0738e",
+            "source": {
+              "cell": "73df68f3-acdc-4267-976a-14dd460642e1",
+              "port": "beefaf37-aad0-4553-8337-8e1865726cd7"
+            },
+            "target": {
+              "cell": "c4e61f08-dc8c-4832-8f5f-ee0c7988f7e9",
+              "port": "a228deb0-d6a5-40bb-98c5-fc7c70f27e6b"
+            },
+            "vertices": [
+              {
+                "x": 670,
+                "y": 260
+              },
+              {
+                "x": 620,
+                "y": 260
+              }
+            ]
+          },
+          {
             "position": {
               "x": 470,
               "y": 650
@@ -1252,6 +1078,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1335,7 +1162,6 @@
               ]
             },
             "id": "6f0df294-b290-4a35-8cc3-8c6f3d3f2978",
-            "zIndex": 11,
             "data": {
               "type": "tm.Actor",
               "name": "Authentication\n Keys",
@@ -1387,6 +1213,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 12,
             "ports": {
               "groups": {
                 "top": {
@@ -1470,7 +1297,6 @@
               ]
             },
             "id": "6186043c-15e0-4297-9956-4b5cc34eebca",
-            "zIndex": 12,
             "data": {
               "type": "tm.Actor",
               "name": "Drones",
@@ -1522,6 +1348,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 13,
             "ports": {
               "groups": {
                 "top": {
@@ -1605,7 +1432,6 @@
               ]
             },
             "id": "161b9ba0-a64e-44c4-b39c-5bc1eb48b13b",
-            "zIndex": 13,
             "data": {
               "type": "tm.Actor",
               "name": "Sensores",
@@ -1642,6 +1468,6 @@
     ],
     "diagramTop": 5,
     "reviewer": "Jsebastian",
-    "threatTop": 23
+    "threatTop": 26
   }
 }
