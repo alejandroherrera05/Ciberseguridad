@@ -60,7 +60,164 @@
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.5.0",
-        "cells": [],
+        "cells": [
+          {
+            "position": {
+              "x": 70,
+              "y": 80
+            },
+            "size": {
+              "width": 150,
+              "height": 60
+            },
+            "attrs": {
+              "label": {
+                "text": "TB-A Red de\nCampo (LoRa/ISM)"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "42236b84-5b23-4436-919c-0c8d523da5cc",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "TB-A Red de\nCampo (LoRa/ISM)",
+              "description": "Sensores de humedad",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 278,
+              "y": 80
+            },
+            "size": {
+              "width": 160,
+              "height": 60
+            },
+            "attrs": {
+              "label": {
+                "text": "TB-B Enlace\nDrones (Wi-Fi Direct)"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "7096a0b8-a7cc-41c2-b26b-67831357d55a",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "TB-B Enlace\nDrones (Wi-Fi Direct)",
+              "description": "Drones",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 466,
+              "y": 80
+            },
+            "size": {
+              "width": 150,
+              "height": 60
+            },
+            "attrs": {
+              "label": {
+                "text": "TB-C Gateway \nde Campo"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "6091b818-99f6-45a9-9b43-6921623ffb0f",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "TB-C Gateway \nde Campo",
+              "description": "Gateway IoT y almacenamiento local",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 654,
+              "y": 80
+            },
+            "size": {
+              "width": 160,
+              "height": 60
+            },
+            "attrs": {
+              "label": {
+                "text": "TB-D Internet / LTE"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "7d445eef-2edb-46f5-95e9-d30109aa2918",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "TB-D Internet / LTE",
+              "description": "Transporte hacia la nube",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 859,
+              "y": 80
+            },
+            "size": {
+              "width": 150,
+              "height": 60
+            },
+            "attrs": {
+              "label": {
+                "text": "TB-E Plataforma\nen la Nube"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "cbd62f4c-1136-4875-8178-aac86da84b4f",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "TB-E Plataforma\nen la Nube",
+              "description": "Broker MQTT, base de datos, API web",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 1052,
+              "y": 80
+            },
+            "size": {
+              "width": 128,
+              "height": 60
+            },
+            "attrs": {
+              "label": {
+                "text": "TB-F Dispositivo Móvil"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "52207600-b2ca-4242-80c5-daa276e6878a",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "TB-F Dispositivo Móvil",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          }
+        ],
         "description": "Un campo agrícola utiliza sensores de humedad del suelo y drones para monitoreo. Los datos son enviados a un sistema de gestión agrícola en la nube."
       }
     ],
