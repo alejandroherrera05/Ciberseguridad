@@ -1,0 +1,26 @@
+{
+  "version": "2.5.0",
+  "summary": {
+    "title": "1. Hogar Inteligente",
+    "owner": "Alejandro",
+    "description": "Un sistema de hogar inteligente conecta sensores de movimiento, cámaras de seguridad y\ncerraduras inteligentes a un servidor en la nube. El usuario interactúa a través de una\naplicación móvil.\n\nConexiones y protocolos:\n• Sensores y cámaras → Gateway doméstico (Wi-Fi, Zigbee).\n• Gateway → Servidor en la nube (HTTPS/TLS).\n• Usuario → Aplicación móvil (HTTPS/TLS).",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 1,
+        "title": "1. Hogar Inteligente",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.5.0",
+        "cells": []
+      }
+    ],
+    "diagramTop": 2,
+    "reviewer": "Jsebastian",
+    "threatTop": 0
+  }
+}
