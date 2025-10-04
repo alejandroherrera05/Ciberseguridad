@@ -467,8 +467,8 @@
                 "text": "Secuestro\nde gateway"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -565,9 +565,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "1c9fb64a-8b73-42e3-9902-70390dc8eb6a",
+                  "title": "Secuestro o toma de control del gateway",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante puede explotar una vulnerabilidad en el software del gateway (por ejemplo, una API no protegida o servicio expuesto) para obtener control total del proceso, cambiar configuraciones o ejecutar comandos arbitrarios hacia las farolas y sensores.",
+                  "mitigation": "Para mitigar esta amenaza se deben aplicar mecanismos de detección de manipulación (C09: Tamper detection alert) y autenticación de firmware y procesos (C01: Authentication).\nTodas las actualizaciones deben estar firmadas digitalmente y verificadas antes de instalación (C02: Encryption), y el gateway debe funcionar bajo principio de privilegio mínimo y separación de procesos (C06: Behavioral profiling).\nAdemás, se deben mantener logs detallados de cambios (C05: User action log) y activar alertas ante comportamientos anómalos.\nCon esto se impide que un atacante obtenga privilegios elevados o manipule la lógica interna del gateway.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 36,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 6,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -854,8 +872,8 @@
                 "text": "Gateaway\nurbano"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -952,9 +970,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "0dcb7081-d618-454d-b911-0c6e5b15c821",
+                  "title": "Manipulación física o acceso no autorizado al Gateway urbano",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing / Spoofing",
+                  "description": "El gateway físico ubicado en la vía pública puede ser accedido físicamente por un atacante, permitiendo la extracción de datos, robo de credenciales o incluso la instalación de firmware malicioso.",
+                  "mitigation": "Debe integrarse detección de apertura o sabotaje físico (C09: Tamper detection alert) mediante sensores en el gabinete o carcasa.\nEl firmware debe arrancar únicamente tras verificar una firma digital válida (C01: Authentication) y mantener el cifrado completo de las configuraciones internas (C02: Encryption).\nTodos los accesos físicos o de mantenimiento deben registrarse en un log de auditoría (C05: User action log).\nEstas medidas impiden que el gateway sea manipulado sin generar alertas y aseguran la integridad del software y hardware desplegado en campo.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 37,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -1004,8 +1040,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "",
-              "description": "",
+              "name": "MQTT/TLS",
+              "description": "Flujo de solicitudes",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -1017,52 +1053,7 @@
               "threats": []
             },
             "labels": [
-              ""
-            ],
-            "id": "57d33023-bc61-4fe4-a150-332d6152423e",
-            "source": {
-              "x": 162,
-              "y": 140
-            },
-            "target": {
-              "cell": "4a889e09-9352-4f06-ae23-3126179db953",
-              "port": "e0278238-eb47-48d2-8e66-7a018fac4693"
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Saturacion de \ngateway",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Saturacion de \ngateway"
+              "MQTT/TLS"
             ],
             "id": "2db94423-b282-4fe3-afd4-c215bcae5e67",
             "source": {
@@ -1207,7 +1198,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Flujo de datos",
+              "name": "Datos de lectura\nambiental (DTLS)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1220,7 +1211,7 @@
               "threats": []
             },
             "labels": [
-              "Flujo de datos"
+              "Datos de lectura\nambiental (DTLS)"
             ],
             "id": "fd70bb64-94a0-490e-a043-e6f5ecfd14f1",
             "source": {
@@ -1258,8 +1249,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Flujo de datos",
-              "description": "",
+              "name": "MQTT/TLS",
+              "description": "Ejecución de comandos hacia gateway urbano, control remoto no autorizado",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -1271,7 +1262,7 @@
               "threats": []
             },
             "labels": [
-              "Flujo de datos"
+              "MQTT/TLS"
             ],
             "id": "a8ed1b91-421f-43cd-ae22-1221363ca996",
             "source": {
@@ -1330,7 +1321,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Flujo de datos",
+              "name": "Telemetría IoT cifrada \n(6LoWPAN/DTLS)",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1342,7 +1333,7 @@
               "protocol": "",
               "threats": [
                 {
-                  "id": "8c8292cc-a413-43d5-99db-73d7d8361ff2",
+                  "id": "f2e89199-9061-431c-81c2-9495ffed9d09",
                   "title": "Saturación o denegación de servicio en el gateway",
                   "status": "Open",
                   "severity": "High",
@@ -1351,27 +1342,72 @@
                   "mitigation": "Para mitigar este riesgo se debe implementar tolerancia a fallos y operación local (C07: Fault tolerance / local operation) que permita mantener la iluminación básica incluso ante desconexión.\nAdicionalmente, se debe aplicar filtrado y limitación de tráfico (C08: Traffic filtering) a nivel de red para evitar picos de solicitudes.\nLa combinación de estas medidas asegura la continuidad del servicio y evita que el gateway colapse durante un ataque o carga anómala.",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 32,
+                  "number": 34,
                   "score": ""
                 }
               ],
               "threatFrequency": {
-                "tampering": 1,
+                "tampering": 0,
                 "informationDisclosure": 0,
                 "denialOfService": 1
               }
             },
             "labels": [
-              "Flujo de datos"
+              "Telemetría IoT cifrada \n(6LoWPAN/DTLS)"
             ],
-            "id": "46b309f0-ffb1-4eaa-9dfd-eb2417363014",
+            "id": "1de89b6d-ff92-4298-9de2-e6e72f411cbd",
             "source": {
-              "x": 189,
+              "x": 181,
               "y": 290
             },
             "target": {
-              "cell": "2b84ad7b-b87a-48c2-ac08-7a2cbb05110e",
-              "port": "2ad8aa44-fe1c-4340-9589-21ae7ec4aa33"
+              "cell": "8dbec60b-30e9-4abf-9382-0f01cf05ecfe",
+              "port": "aa2b5862-9e98-41f1-a7eb-dd3c2b4383ca"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS/TLS",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "HTTPS/TLS"
+            ],
+            "id": "57d33023-bc61-4fe4-a150-332d6152423e",
+            "source": {
+              "x": 162,
+              "y": 140
+            },
+            "target": {
+              "cell": "4a889e09-9352-4f06-ae23-3126179db953",
+              "port": "e0278238-eb47-48d2-8e66-7a018fac4693"
             }
           },
           {
@@ -1395,8 +1431,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Suplantacion\nde gateway",
-              "description": "",
+              "name": "HTTPS/HSTS",
+              "description": "Canal de administracion",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -1427,7 +1463,7 @@
               }
             },
             "labels": [
-              "Suplantacion\nde gateway"
+              "HTTPS/HSTS"
             ],
             "id": "1218542f-88d9-4ca8-a07e-7f5aeebcb69b",
             "source": {
@@ -1460,8 +1496,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Flujo de datos",
-              "description": "",
+              "name": "Admin/API–SSH–OTA",
+              "description": "Interfaz de administración y servicios expuestos",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -1472,7 +1508,7 @@
               "protocol": "",
               "threats": [
                 {
-                  "id": "f2e89199-9061-431c-81c2-9495ffed9d09",
+                  "id": "8c8292cc-a413-43d5-99db-73d7d8361ff2",
                   "title": "Saturación o denegación de servicio en el gateway",
                   "status": "Open",
                   "severity": "High",
@@ -1481,28 +1517,34 @@
                   "mitigation": "Para mitigar este riesgo se debe implementar tolerancia a fallos y operación local (C07: Fault tolerance / local operation) que permita mantener la iluminación básica incluso ante desconexión.\nAdicionalmente, se debe aplicar filtrado y limitación de tráfico (C08: Traffic filtering) a nivel de red para evitar picos de solicitudes.\nLa combinación de estas medidas asegura la continuidad del servicio y evita que el gateway colapse durante un ataque o carga anómala.",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 34,
+                  "number": 32,
                   "score": ""
                 }
               ],
               "threatFrequency": {
-                "tampering": 0,
+                "tampering": 1,
                 "informationDisclosure": 0,
                 "denialOfService": 1
               }
             },
             "labels": [
-              "Flujo de datos"
+              "Admin/API–SSH–OTA"
             ],
-            "id": "1de89b6d-ff92-4298-9de2-e6e72f411cbd",
+            "id": "46b309f0-ffb1-4eaa-9dfd-eb2417363014",
             "source": {
-              "x": 181,
+              "x": 189,
               "y": 290
             },
             "target": {
-              "cell": "8dbec60b-30e9-4abf-9382-0f01cf05ecfe",
-              "port": "aa2b5862-9e98-41f1-a7eb-dd3c2b4383ca"
-            }
+              "cell": "2b84ad7b-b87a-48c2-ac08-7a2cbb05110e",
+              "port": "2ad8aa44-fe1c-4340-9589-21ae7ec4aa33"
+            },
+            "vertices": [
+              {
+                "x": 320,
+                "y": 320
+              }
+            ]
           }
         ],
         "description": "El sistema de alumbrado público inteligente conecta farolas con sensores de luminosidad y movimiento a un centro de control municipal. Los datos permiten regular la intensidad de la iluminación en tiempo real."
@@ -2932,6 +2974,6 @@
     ],
     "diagramTop": 5,
     "reviewer": "Jsebastian",
-    "threatTop": 35
+    "threatTop": 37
   }
 }
