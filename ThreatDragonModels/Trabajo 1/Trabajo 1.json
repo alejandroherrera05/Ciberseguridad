@@ -84,16 +84,16 @@
           },
           {
             "position": {
-              "x": 179.99999999999932,
-              "y": 210.0000000000025
+              "x": 179.99999999999898,
+              "y": 210.00000000000193
             },
             "size": {
               "width": 830,
-              "height": 390
+              "height": 380
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "02ea576f-5e7f-4be5-a645-a3fcbfd97f18",
+            "id": "221876e6-8fb7-4651-b9aa-79537d9661ac",
             "zIndex": -1,
             "data": {
               "type": "tm.BoundaryBox",
@@ -105,16 +105,16 @@
           },
           {
             "position": {
-              "x": 179.99999999999977,
-              "y": 600.0000000000025
+              "x": 179.99999999999886,
+              "y": 590.0000000000023
             },
             "size": {
               "width": 830,
-              "height": 410
+              "height": 440
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "bf8a59ff-76f5-45a4-a5b8-1c4b281620b8",
+            "id": "fb7b90be-49f5-4231-9c61-941ce20989d3",
             "zIndex": -1,
             "data": {
               "type": "tm.BoundaryBox",
@@ -644,7 +644,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -665,12 +666,31 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "61d4413b-83f0-43cb-8e92-feb61c6692aa",
+                  "title": "Exposición de tokens o sesiones en HTTPS  ",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Cookies o tokens sin flags seguros, TLS mal configurado o sesiones largas.",
+                  "mitigation": "C04 TLS fuerte; cookies HttpOnly/Secure/SameSite; expiración corta y rotación de tokens; detección de anomalías.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "HTTPS"
@@ -698,6 +718,10 @@
                 "y": 400
               },
               {
+                "x": 690,
+                "y": 370
+              },
+              {
                 "x": 720,
                 "y": 350
               },
@@ -711,66 +735,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              ""
-            ],
-            "id": "5d7b4018-845a-4401-81ab-2106d6f2cc88",
-            "source": {
-              "cell": "c4e61f08-dc8c-4832-8f5f-ee0c7988f7e9",
-              "port": "977312f5-4376-4157-984d-8afc3b58d7f2"
-            },
-            "target": {
-              "cell": "6f0df294-b290-4a35-8cc3-8c6f3d3f2978",
-              "port": "8fe8fbf0-fe95-4ddd-8e6c-7a58d38d029a"
-            },
-            "vertices": [
-              {
-                "x": 550,
-                "y": 550
-              },
-              {
-                "x": 600,
-                "y": 570
-              },
-              {
-                "x": 570,
-                "y": 610
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -791,12 +757,44 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "a6bafa45-2e24-4bf3-9827-f28dd4f8ed49",
+                  "title": "Alteración de telemetría o imágenes",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering / Manipulación",
+                  "description": "Firmware comprometido o manipulación de paquetes de datos.",
+                  "mitigation": "C02 Firmware firmado y OTA segura; validación de integridad en gateway; atestación del dispositivo.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": "8"
+                },
+                {
+                  "id": "17845956-81ae-488e-b23c-00b45419ee1c",
+                  "title": "Interferencia o saturación del enlace del dron",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service / Denegación de servicio",
+                  "description": "Jamming o flood de canal impide la transmisión.",
+                  "mitigation": "C05 IDS/IPS livianos, rate-limiting, selección dinámica de canal/antenas.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 1
+              }
             },
             "labels": [
               "Wi-Fi Direct"
@@ -812,12 +810,20 @@
             },
             "vertices": [
               {
-                "x": 580,
+                "x": 560,
+                "y": 840
+              },
+              {
+                "x": 620,
                 "y": 860
               },
               {
-                "x": 676,
+                "x": 640,
                 "y": 860
+              },
+              {
+                "x": 696,
+                "y": 840
               }
             ]
           },
@@ -825,125 +831,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "LoRaWAN",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "LoRaWAN"
-            ],
-            "id": "d174009e-7c2b-4dfb-8e91-f05a2d9d91dc",
-            "source": {
-              "cell": "6f0df294-b290-4a35-8cc3-8c6f3d3f2978",
-              "port": "beefaf37-aad0-4553-8337-8e1865726cd7"
-            },
-            "target": {
-              "cell": "161b9ba0-a64e-44c4-b39c-5bc1eb48b13b",
-              "port": "8fe8fbf0-fe95-4ddd-8e6c-7a58d38d029a"
-            },
-            "vertices": [
-              {
-                "x": 505,
-                "y": 870
-              },
-              {
-                "x": 470,
-                "y": 850
-              },
-              {
-                "x": 450,
-                "y": 870
-              },
-              {
-                "x": 406,
-                "y": 850
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              ""
-            ],
-            "id": "dd37fa61-cf8e-4984-a05a-55626fcaf028",
-            "source": {
-              "cell": "6f0df294-b290-4a35-8cc3-8c6f3d3f2978",
-              "port": "8fe8fbf0-fe95-4ddd-8e6c-7a58d38d029a"
-            },
-            "target": {
-              "cell": "c4e61f08-dc8c-4832-8f5f-ee0c7988f7e9",
-              "port": "977312f5-4376-4157-984d-8afc3b58d7f2"
-            },
-            "vertices": [
-              {
-                "x": 470,
-                "y": 570
-              },
-              {
-                "x": 517.5,
-                "y": 550
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -964,12 +853,44 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "5cfd6a07-afb3-4bcf-897b-0f16dbd2f665",
+                  "title": "Exposición de datos en el backhaul MQTT (TLS débil)",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Certificados inválidos o versiones TLS obsoletas permiten MITM.",
+                  "mitigation": "C04 TLS 1.3 estricto, mTLS, pinning de CA/hostname, rotación de credenciales.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 10,
+                  "score": "8"
+                },
+                {
+                  "id": "22102557-e088-47ab-97f0-ef9dccfa9289",
+                  "title": "Saturación al broker MQTT",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service / Denegación de servicio",
+                  "description": "Flood de publicaciones/QoS abusivo, uso de retained para degradar servicio.",
+                  "mitigation": "C05 rate-limit, quotas, ACL por tópico, HA/cluster, detección de anomalías.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
             },
             "labels": [
               "MQTT/TLS"
@@ -989,7 +910,7 @@
                 "y": 440
               },
               {
-                "x": 740,
+                "x": 730,
                 "y": 500
               },
               {
@@ -1062,6 +983,255 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "LoRaWAN",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "e1c30227-b45d-460e-8d09-349304af3359",
+                  "title": "Manipulación de paquetes LoRaWAN",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering / Manipulación",
+                  "description": "Reinyección o modificación de payload/nonce para alterar medidas; intento de downgrade",
+                  "mitigation": "C02 AES/MIC LoRaWAN, rechazo de nonces repetidos, sincronización de reloj, verificación de integridad extremo a extremo",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 2,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "LoRaWAN"
+            ],
+            "id": "0c04a8c9-02de-4ef6-99d1-6df1d368c44e",
+            "source": {
+              "cell": "6f0df294-b290-4a35-8cc3-8c6f3d3f2978",
+              "port": "beefaf37-aad0-4553-8337-8e1865726cd7"
+            },
+            "target": {
+              "cell": "161b9ba0-a64e-44c4-b39c-5bc1eb48b13b",
+              "port": "8fe8fbf0-fe95-4ddd-8e6c-7a58d38d029a"
+            },
+            "vertices": [
+              {
+                "x": 490,
+                "y": 860
+              },
+              {
+                "x": 450,
+                "y": 860
+              },
+              {
+                "x": 430,
+                "y": 880
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "b4332a46-c7bc-4ef9-adc1-4c439e8d8d20",
+                  "title": "Exposición de claves/tokens locales",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Robo o filtración por disco sin cifrar o backup inseguro.",
+                  "mitigation": "C04 cifrado en reposo, bóveda de secretos, RBAC, hardening del SO.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              ""
+            ],
+            "id": "5d7b4018-845a-4401-81ab-2106d6f2cc88",
+            "source": {
+              "cell": "c4e61f08-dc8c-4832-8f5f-ee0c7988f7e9",
+              "port": "977312f5-4376-4157-984d-8afc3b58d7f2"
+            },
+            "target": {
+              "cell": "6f0df294-b290-4a35-8cc3-8c6f3d3f2978",
+              "port": "8fe8fbf0-fe95-4ddd-8e6c-7a58d38d029a"
+            },
+            "vertices": [
+              {
+                "x": 590,
+                "y": 520
+              },
+              {
+                "x": 590,
+                "y": 540
+              },
+              {
+                "x": 620,
+                "y": 600
+              },
+              {
+                "x": 590,
+                "y": 620
+              },
+              {
+                "x": 560,
+                "y": 620
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "7d595cb0-817e-4679-9ea8-17ec39294e34",
+                  "title": "Nueva amenaza STRIDE",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Tampering / Manipulación",
+                  "description": "Introduzca una descripción para esta amenaza",
+                  "mitigation": "Introduzca la mitigación o prevención para esta amenaza",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              ""
+            ],
+            "id": "36a8edcd-bdf3-43b4-b81a-ffc40617cc92",
+            "source": {
+              "cell": "6f0df294-b290-4a35-8cc3-8c6f3d3f2978",
+              "port": "8fe8fbf0-fe95-4ddd-8e6c-7a58d38d029a"
+            },
+            "target": {
+              "cell": "c4e61f08-dc8c-4832-8f5f-ee0c7988f7e9",
+              "port": "977312f5-4376-4157-984d-8afc3b58d7f2"
+            },
+            "vertices": [
+              {
+                "x": 525,
+                "y": 620
+              },
+              {
+                "x": 460,
+                "y": 590
+              },
+              {
+                "x": 460,
+                "y": 550
+              },
+              {
+                "x": 490,
+                "y": 510
+              }
+            ]
+          },
+          {
             "position": {
               "x": 470,
               "y": 650
@@ -1075,8 +1245,8 @@
                 "text": "Authentication\n Keys"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1173,9 +1343,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "7930ca94-9739-4306-a21d-51e9c3c285bd",
+                  "title": "Cambios sin auditoría en credenciales",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation / Repudiación",
+                  "description": "Accesos o modificaciones sin registro imposibilitan trazabilidad.",
+                  "mitigation": "C03 logs firmados, SIEM, NTP seguro, control de cambios con alertas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "7"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -1327,8 +1515,8 @@
                 "text": "Sensores"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1425,9 +1613,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "40b2b2f4-72b0-46dc-b6b6-648b136edcec",
+                  "title": "Suplantación de dron por Wi-Fi Direct",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un cliente malicioso se hace pasar por el dron y envía o recibe telemetría falsa o imágenes alteradas.",
+                  "mitigation": "C01 Certificados y emparejamiento por identidad, listas blancas de dispositivos, aislamiento de SSID/canal.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           }
         ],
@@ -1436,6 +1642,6 @@
     ],
     "diagramTop": 5,
     "reviewer": "Jsebastian",
-    "threatTop": 7
+    "threatTop": 23
   }
 }
