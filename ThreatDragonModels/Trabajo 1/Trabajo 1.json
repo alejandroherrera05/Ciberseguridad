@@ -43,6 +43,48 @@
         "cells": [
           {
             "position": {
+              "x": 50.9999999999996,
+              "y": 55.00000000000031
+            },
+            "size": {
+              "width": 540,
+              "height": 110
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "4f04d608-423a-445a-8b48-56ced60bbdf2",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Límite de confianza",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 50.99999999999807,
+              "y": 165.00000000000273
+            },
+            "size": {
+              "width": 540,
+              "height": 550
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "0bc18a3c-6807-47ee-beac-2d5e43876cd1",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Límite de confianza",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
               "x": 107.5,
               "y": 80
             },
@@ -62,6 +104,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -145,7 +188,6 @@
               ]
             },
             "id": "66755c7d-ae1a-4f5b-aa62-069f5430b166",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Internet",
@@ -197,6 +239,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -280,7 +323,6 @@
               ]
             },
             "id": "4a889e09-9352-4f06-ae23-3126179db953",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Gateway\nlogico",
@@ -339,6 +381,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -422,7 +465,6 @@
               ]
             },
             "id": "6055bc51-c755-4a12-8b84-ce1ecea03c77",
-            "zIndex": 3,
             "data": {
               "type": "tm.Actor",
               "name": "Consola del\noperador",
@@ -474,6 +516,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -557,7 +600,6 @@
               ]
             },
             "id": "2b84ad7b-b87a-48c2-ac08-7a2cbb05110e",
-            "zIndex": 4,
             "data": {
               "type": "tm.Actor",
               "name": "Secuestro\nde gateway",
@@ -609,6 +651,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -692,7 +735,6 @@
               ]
             },
             "id": "8dbec60b-30e9-4abf-9382-0f01cf05ecfe",
-            "zIndex": 5,
             "data": {
               "type": "tm.Actor",
               "name": "Farolas\ninteligentes",
@@ -744,6 +786,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 6,
             "ports": {
               "groups": {
                 "top": {
@@ -827,7 +870,6 @@
               ]
             },
             "id": "e29f4834-11f2-405f-8843-555d63acca72",
-            "zIndex": 6,
             "data": {
               "type": "tm.Actor",
               "name": "Sensores",
@@ -879,6 +921,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 7,
             "ports": {
               "groups": {
                 "top": {
@@ -962,7 +1005,6 @@
               ]
             },
             "id": "dc68a837-801c-448e-b195-6b7d901a0497",
-            "zIndex": 7,
             "data": {
               "type": "tm.Actor",
               "name": "Gateaway\nurbano",
@@ -992,33 +1034,6 @@
                 "repudiation": 0
               }
             }
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              ""
-            ],
-            "id": "72e2daf0-01e4-43da-a23f-249fef4b9037",
-            "source": {
-              "x": 30,
-              "y": 40
-            },
-            "target": {
-              "x": 590,
-              "y": 40
-            },
-            "vertices": []
           },
           {
             "shape": "flow",
@@ -1070,113 +1085,6 @@
                 "y": 340
               }
             ]
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              ""
-            ],
-            "id": "605a0d98-5cde-4ccd-84de-cd9345c8989a",
-            "source": {
-              "x": 50,
-              "y": 40
-            },
-            "target": {
-              "x": 60,
-              "y": 720
-            }
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              ""
-            ],
-            "id": "3ff5129b-e3be-40dc-abbe-c9ccb1d45e61",
-            "source": {
-              "x": 590,
-              "y": 40
-            },
-            "target": {
-              "x": 600,
-              "y": 730
-            },
-            "vertices": []
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              ""
-            ],
-            "id": "30808ec4-2572-4ec4-9339-58a1035870e7",
-            "source": {
-              "x": 50,
-              "y": 720
-            },
-            "target": {
-              "x": 610,
-              "y": 720
-            },
-            "vertices": []
-          },
-          {
-            "shape": "trust-boundary-curve",
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Boundary",
-              "name": "",
-              "description": "",
-              "isTrustBoundary": true,
-              "hasOpenThreats": false
-            },
-            "labels": [
-              ""
-            ],
-            "id": "2ea16a81-8e26-4066-9ca6-64bcaa391a0c",
-            "source": {
-              "x": 50,
-              "y": 170
-            },
-            "target": {
-              "x": 590,
-              "y": 170
-            },
-            "vertices": []
           },
           {
             "shape": "flow",
@@ -1545,6 +1453,78 @@
                 "y": 320
               }
             ]
+          },
+          {
+            "position": {
+              "x": 465,
+              "y": 55
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Internet / Nube"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "eb0037dd-02d5-4b8d-bdee-fd0b6aea7f14",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Text",
+              "name": "Internet / Nube",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 50.9999999999996,
+              "y": 165.0000000000003
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Gateway / \nControl intermedio"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "9a252632-e350-42de-8019-2d412d7a4226",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Text",
+              "name": "Gateway / \nControl intermedio",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 253,
+              "y": 462
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Campo / \nDispositivos IoT"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "8508ae1b-5cdd-45be-84c0-ab89076041db",
+            "zIndex": 13,
+            "data": {
+              "type": "tm.Text",
+              "name": "Campo / \nDispositivos IoT",
+              "hasOpenThreats": false
+            }
           }
         ],
         "description": "El sistema de alumbrado público inteligente conecta farolas con sensores de luminosidad y movimiento a un centro de control municipal. Los datos permiten regular la intensidad de la iluminación en tiempo real."
