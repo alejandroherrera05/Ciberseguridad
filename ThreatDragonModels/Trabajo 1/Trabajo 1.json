@@ -1,0 +1,67 @@
+{
+  "version": "2.5.0",
+  "summary": {
+    "title": "Trabajo 1",
+    "owner": "Alejandro",
+    "description": "A continuación, se presentan cinco escenarios de sistemas IoT en distintos contextos. Cada\nescenario describe los elementos principales y las conexiones entre ellos, incluyendo los\nprotocolos de comunicación utilizados.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [],
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "1. Hogar Inteligente",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.5.0",
+        "cells": [],
+        "description": "Un sistema de hogar inteligente conecta sensores de movimiento, cámaras de seguridad y cerraduras inteligentes a un servidor en la nube. El usuario interactúa a través de una aplicación móvil."
+      },
+      {
+        "id": 1,
+        "title": "2. Planta Industrial",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.5.0",
+        "cells": [],
+        "description": "Una planta utiliza sensores de presión y temperatura conectados a PLC. Los PLC se comunican con un Gateway IoT que transmite datos a un sistema en la nube accesible por ingenieros."
+      },
+      {
+        "id": 2,
+        "title": "3. Ciudad Inteligente",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.5.0",
+        "cells": [],
+        "description": "El sistema de alumbrado público inteligente conecta farolas con sensores de luminosidad y movimiento a un centro de control municipal. Los datos permiten regular la intensidad de la iluminación en tiempo real."
+      },
+      {
+        "id": 3,
+        "title": "4. Salud Conectada",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.5.0",
+        "cells": [],
+        "description": "Un hospital utiliza dispositivos médicos portátiles que miden ritmo cardíaco y oxigenación. Los datos se transmiten al sistema del hospital y luego a una nube para análisis remoto por especialistas."
+      },
+      {
+        "id": 4,
+        "title": "5. Agricultura Inteligente",
+        "diagramType": "STRIDE",
+        "placeholder": "New STRIDE diagram description",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.5.0",
+        "cells": [],
+        "description": "Un campo agrícola utiliza sensores de humedad del suelo y drones para monitoreo. Los datos son enviados a un sistema de gestión agrícola en la nube."
+      }
+    ],
+    "diagramTop": 5,
+    "reviewer": "Jsebastian",
+    "threatTop": 0
+  }
+}
