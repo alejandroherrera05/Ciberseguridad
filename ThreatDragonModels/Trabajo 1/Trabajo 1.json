@@ -7,7 +7,11 @@
     "id": 0
   },
   "detail": {
-    "contributors": [],
+    "contributors": [
+      {
+        "name": "jsebxs"
+      }
+    ],
     "diagrams": [
       {
         "id": 0,
