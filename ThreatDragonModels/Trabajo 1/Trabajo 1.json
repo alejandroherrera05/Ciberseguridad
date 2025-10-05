@@ -233,8 +233,8 @@
                 "text": "Gateway\nlogico"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -331,12 +331,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "41f8ed9c-1bc1-4ac6-83a8-d3420b35bf08",
+                  "title": "Suplantación del gateway ante la nube",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante podría hacerse pasar por el gateway legítimo ante el servidor en la nube para interceptar o manipular la información enviada por los dispositivos domésticos.\n",
+                  "mitigation": "La mitigación requiere habilitar *autenticación mutua (mTLS)* entre el gateway y la nube (C01), utilizando certificados únicos emitidos por una autoridad certificadora interna o comercial.\nEl canal debe cifrarse con *TLS 1.3* (C02) y reforzarse con políticas *HSTS* (C04) que eviten degradaciones a versiones inseguras.\nCada intento de conexión debe registrarse y auditarse (C05).\nCon esta configuración, la nube solo acepta conexiones de gateways legítimos, bloqueando ataques de suplantación y garantizando la autenticidad de la comunicación.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 61,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -1543,13 +1565,6 @@
               "type": "tm.Text",
               "name": "Internet/Cloud",
               "hasOpenThreats": false
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           }
         ],
@@ -5829,6 +5844,6 @@
     ],
     "diagramTop": 5,
     "reviewer": "Jsebastian",
-    "threatTop": 60
+    "threatTop": 61
   }
 }
