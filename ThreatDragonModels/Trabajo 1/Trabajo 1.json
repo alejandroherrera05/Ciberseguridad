@@ -20,7 +20,1539 @@
         "placeholder": "New STRIDE diagram description",
         "thumbnail": "./public/content/images/thumbnail.stride.jpg",
         "version": "2.5.0",
-        "cells": [],
+        "cells": [
+          {
+            "position": {
+              "x": 318,
+              "y": 20.000000000001364
+            },
+            "size": {
+              "width": 650,
+              "height": 160
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "f7dcf346-b24e-4b66-a57d-3d7b051bfd5a",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Límite de confianza",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 317.99999999999955,
+              "y": 180.00000000000045
+            },
+            "size": {
+              "width": 650,
+              "height": 380
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "5c9fc06a-ca78-4a46-b19e-81063e8d71d9",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Límite de confianza",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 315.99999999999955,
+              "y": 557.0000000000013
+            },
+            "size": {
+              "width": 650,
+              "height": 380
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "c83059aa-dc1e-4401-a34e-974ebc1318e9",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Límite de confianza",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 370,
+              "y": 80
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Internet"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "31871fcf-a2e7-4dad-baa9-5dc05c421b37"
+                },
+                {
+                  "group": "right",
+                  "id": "b5cd957a-04d9-43f4-8809-91bec6537922"
+                },
+                {
+                  "group": "bottom",
+                  "id": "2ca7ec50-ebb2-4de8-9ff4-9df84d3d0446"
+                },
+                {
+                  "group": "left",
+                  "id": "5d11f99d-7f7b-4d40-941e-3c19dc952823"
+                }
+              ]
+            },
+            "id": "b0ae41dc-eb40-40c9-91a2-9d67970b5158",
+            "zIndex": 1,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Internet",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "816bb0f5-ae0a-4aac-b657-ed853c313b5e",
+                  "title": "Ataque de denegación de servicio externo",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Actores externos pueden generar un alto volumen de solicitudes o paquetes hacia el gateway, saturando la conexión y provocando interrupción de los servicios del hogar inteligente.\n",
+                  "mitigation": "Se deben implementar *mecanismos de filtrado y limitación de solicitudes (rate limiting)* mediante un *firewall embebido* (C08) que descarte tráfico repetitivo o malicioso.\nAdemás, el sistema debe contar con un *modo de operación local tolerante a fallos* (C07), capaz de mantener las funciones esenciales aunque la conexión a la nube se interrumpa.\nEste enfoque asegura continuidad operativa y reduce significativamente el impacto de los ataques volumétricos.\n\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 57,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 386.25,
+              "y": 225
+            },
+            "size": {
+              "width": 80,
+              "height": 80
+            },
+            "attrs": {
+              "text": {
+                "text": "Gateway\nlogico"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "1fc58bde-a7d7-42d7-a8c4-2f8816a48be2"
+                },
+                {
+                  "group": "right",
+                  "id": "bb76458c-95d5-4ec7-8783-7ae444742397"
+                },
+                {
+                  "group": "bottom",
+                  "id": "f222def7-7d9d-4788-a47e-282ef9f82749"
+                },
+                {
+                  "group": "left",
+                  "id": "e46d00a1-926d-4d86-9463-f1b64eca2897"
+                }
+              ]
+            },
+            "id": "02714c93-dce4-4a27-a720-bcaa36889c7f",
+            "zIndex": 2,
+            "data": {
+              "type": "tm.Process",
+              "name": "Gateway\nlogico",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            }
+          },
+          {
+            "position": {
+              "x": 751.5,
+              "y": 195
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Servidor en\nla nube"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "31871fcf-a2e7-4dad-baa9-5dc05c421b37"
+                },
+                {
+                  "group": "right",
+                  "id": "b5cd957a-04d9-43f4-8809-91bec6537922"
+                },
+                {
+                  "group": "bottom",
+                  "id": "2ca7ec50-ebb2-4de8-9ff4-9df84d3d0446"
+                },
+                {
+                  "group": "left",
+                  "id": "5d11f99d-7f7b-4d40-941e-3c19dc952823"
+                }
+              ]
+            },
+            "id": "3737e94d-79a6-4513-a609-eafa1ad26382",
+            "zIndex": 3,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Servidor en\nla nube",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "10fad076-e72d-45fe-99e9-415a11209e71",
+                  "title": "Manipulación de datos en tránsito (ataque MITM)",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Los datos transmitidos entre el gateway y la nube pueden ser interceptados o modificados durante la transmisión, lo que compromete la integridad y autenticidad de la información del sistema IoT.\n",
+                  "mitigation": "La mitigación consiste en aplicar *HTTPS/TLS con políticas HSTS y certificate pinning* (C04, C02) para asegurar el canal de transporte.\nCada mensaje debe *firmarse digitalmente* con algoritmos SHA-256 y registrarse en *logs de auditoría protegidos* (C05).\nCon esto, cualquier modificación o intento de inyección será detectado y los datos llegarán íntegros y verificables al servidor, evitando ataques Man-in-the-Middle.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 56,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 810,
+              "y": 440
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Saturacion\nde gateway"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "31871fcf-a2e7-4dad-baa9-5dc05c421b37"
+                },
+                {
+                  "group": "right",
+                  "id": "b5cd957a-04d9-43f4-8809-91bec6537922"
+                },
+                {
+                  "group": "bottom",
+                  "id": "2ca7ec50-ebb2-4de8-9ff4-9df84d3d0446"
+                },
+                {
+                  "group": "left",
+                  "id": "5d11f99d-7f7b-4d40-941e-3c19dc952823"
+                }
+              ]
+            },
+            "id": "2eb25a80-2731-432d-bfc0-c64e6a815a22",
+            "zIndex": 4,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Saturacion\nde gateway",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "0b6e43c8-6fe3-4cc1-afcd-90f2e9cb2e04",
+                  "title": "Sobrecarga por exceso de peticiones internas",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing / Spoofing",
+                  "description": "El gateway puede saturarse cuando múltiples sensores o cámaras envían peticiones simultáneas, provocando pérdida de rendimiento y posibles interrupciones del sistema.\n",
+                  "mitigation": "Se debe configurar *colas de mensajes MQTT con control de calidad de servicio (QoS)* y aplicar *limitación de tráfico interno* (C07, C08).\nUn *watchdog* debe supervisar continuamente el uso de CPU y memoria, reiniciando procesos cuando se detecte sobrecarga y priorizando tareas críticas para mantener la estabilidad del sistema.\nDe esta manera se garantiza la disponibilidad y operación continua del gateway incluso bajo condiciones de alta demanda.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 59,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 416.25,
+              "y": 830
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Camara"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "31871fcf-a2e7-4dad-baa9-5dc05c421b37"
+                },
+                {
+                  "group": "right",
+                  "id": "b5cd957a-04d9-43f4-8809-91bec6537922"
+                },
+                {
+                  "group": "bottom",
+                  "id": "2ca7ec50-ebb2-4de8-9ff4-9df84d3d0446"
+                },
+                {
+                  "group": "left",
+                  "id": "5d11f99d-7f7b-4d40-941e-3c19dc952823"
+                }
+              ]
+            },
+            "id": "60e9bc8f-9050-4d08-9fd0-35b521e4c8ac",
+            "zIndex": 5,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Camara",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "094f9596-2b7a-434b-bd4b-7685536c0419",
+                  "title": "Interceptación del flujo de video",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing / Spoofing",
+                  "description": "El flujo de video entre la cámara y el gateway puede ser interceptado o copiado si la transmisión no se encuentra adecuadamente cifrada, exponiendo imágenes privadas del interior del hogar.\n\n",
+                  "mitigation": "Se debe configurar la cámara y el gateway para emplear *TLS 1.3 con autenticación mutua (mTLS)* (C01, C02), de modo que ambos dispositivos verifiquen sus identidades antes de intercambiar información.\nEl almacenamiento de clips debe protegerse mediante *cifrado AES-256* (C03) y control de acceso basado en roles con credenciales seguras.\nEstas medidas garantizan confidencialidad y autenticidad de las imágenes transmitidas y evitan que terceros no autorizados intercepten el flujo de video o accedan al material almacenado.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 53,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 410,
+              "y": 600
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Sensores"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "31871fcf-a2e7-4dad-baa9-5dc05c421b37"
+                },
+                {
+                  "group": "right",
+                  "id": "b5cd957a-04d9-43f4-8809-91bec6537922"
+                },
+                {
+                  "group": "bottom",
+                  "id": "2ca7ec50-ebb2-4de8-9ff4-9df84d3d0446"
+                },
+                {
+                  "group": "left",
+                  "id": "5d11f99d-7f7b-4d40-941e-3c19dc952823"
+                }
+              ]
+            },
+            "id": "33c231fc-5fe6-453d-81c3-c8fd44a7ac0a",
+            "zIndex": 6,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Sensores",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "24ff1edb-a04f-4a56-8d7c-bce72fc028c1",
+                  "title": "Dispositivo falso en la red de sensores",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante puede conectar un sensor falso a la red Wi-Fi o Zigbee y enviar lecturas manipuladas que alteren la automatización del sistema, generando acciones incorrectas o comprometiendo la privacidad de los datos.\n",
+                  "mitigation": "Para mitigar esta amenaza se debe implementar *autenticación individual de cada sensor mediante certificados digitales o claves pre-compartidas* (C01), validando su identidad desde el gateway antes de aceptar cualquier conexión.\nLa comunicación debe cifrarse con *TLS o DTLS* (C02) para proteger los datos frente a inyección o espionaje, y el gateway debe mantener una *lista blanca de dispositivos autorizados* que se actualice periódicamente.\nEste proceso asegura que únicamente sensores legítimos participen en la red, garantizando la integridad y confiabilidad de la información transmitida.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 52,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 697.5,
+              "y": 680
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Gateway\ndomestico"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "31871fcf-a2e7-4dad-baa9-5dc05c421b37"
+                },
+                {
+                  "group": "right",
+                  "id": "b5cd957a-04d9-43f4-8809-91bec6537922"
+                },
+                {
+                  "group": "bottom",
+                  "id": "2ca7ec50-ebb2-4de8-9ff4-9df84d3d0446"
+                },
+                {
+                  "group": "left",
+                  "id": "5d11f99d-7f7b-4d40-941e-3c19dc952823"
+                }
+              ]
+            },
+            "id": "c049f39b-eac0-47f9-9520-8e817dbc4e4a",
+            "zIndex": 7,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Gateway\ndomestico",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "46c866a1-8d0d-4286-9327-869a82cf391e",
+                  "title": "Suplantación del gateway ante la nube",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante podría hacerse pasar por el gateway legítimo ante el servidor en la nube para interceptar o manipular la información enviada por los dispositivos domésticos.\n",
+                  "mitigation": "La mitigación requiere habilitar *autenticación mutua (mTLS)* entre el gateway y la nube (C01), utilizando certificados únicos emitidos por una autoridad certificadora interna o comercial.\nEl canal debe cifrarse con *TLS 1.3* (C02) y reforzarse con políticas *HSTS* (C04) que eviten degradaciones a versiones inseguras.\nCada intento de conexión debe registrarse y auditarse (C05).\nCon esta configuración, la nube solo acepta conexiones de gateways legítimos, bloqueando ataques de suplantación y garantizando la autenticidad de la comunicación.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 55,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS/HSTS",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "HTTPS/HSTS"
+            ],
+            "id": "605ca2ef-113d-47c6-8bfa-9b6a62cdf0c6",
+            "source": {
+              "x": 804,
+              "y": 255
+            },
+            "target": {
+              "cell": "2eb25a80-2731-432d-bfc0-c64e6a815a22",
+              "port": "31871fcf-a2e7-4dad-baa9-5dc05c421b37"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Cifrado TLS",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Cifrado TLS"
+            ],
+            "id": "ab00748c-6c93-4875-9378-a75e4877a7c6",
+            "source": {
+              "x": 519,
+              "y": 631
+            },
+            "target": {
+              "cell": "c049f39b-eac0-47f9-9520-8e817dbc4e4a",
+              "port": "5d11f99d-7f7b-4d40-941e-3c19dc952823"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Contacto fisico",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Contacto fisico"
+            ],
+            "id": "75f0f9b4-6363-4f8e-abec-9e1cdfa28212",
+            "source": {
+              "x": 690,
+              "y": 710
+            },
+            "target": {
+              "cell": "d9f2fe83-fa45-43b4-bb88-7c4546c98110",
+              "port": "31871fcf-a2e7-4dad-baa9-5dc05c421b37"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS/TLS",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "483e0386-b04e-4179-a1dd-760a186b7b01",
+                  "title": "Interceptación o manipulación de datos durante la transmisión",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Un atacante puede intentar interceptar o modificar los datos que circulan entre el gateway y el servidor en la nube, vulnerando la confidencialidad y la integridad de la información.\n",
+                  "mitigation": "Para proteger esta comunicación se debe emplear TLS 1.3 con algoritmos de cifrado fuertes AES-GCM o ChaCha20 (C02), habilitar certificate pinning y autenticación mutua (mTLS) (C01, C04) y registrar todos los eventos de conexión con auditorías automáticas (C05, C06).\nEstas medidas garantizan que el canal de transporte mantenga confidencialidad e integridad y que cualquier intento de manipulación sea detectado de inmediato.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 58,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "HTTPS/TLS"
+            ],
+            "id": "fc6ed3b8-ba34-476b-a7a8-8a9b611c4dc8",
+            "source": {
+              "x": 466,
+              "y": 262
+            },
+            "target": {
+              "cell": "3737e94d-79a6-4513-a609-eafa1ad26382",
+              "port": "5d11f99d-7f7b-4d40-941e-3c19dc952823"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              ""
+            ],
+            "id": "56c25e6c-fa6d-4b3e-8d60-7ea844728ade",
+            "source": {
+              "x": 416,
+              "y": 140
+            },
+            "target": {
+              "cell": "02714c93-dce4-4a27-a720-bcaa36889c7f",
+              "port": "1fc58bde-a7d7-42d7-a8c4-2f8816a48be2"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "635b3d17-32ed-45c3-88cb-71255ff2dd73",
+                  "title": "Interceptación o manipulación de datos durante la transmisión",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure / Brecha de información",
+                  "description": "Un atacante puede intentar interceptar o modificar los datos que circulan entre el gateway y el servidor en la nube, vulnerando la confidencialidad y la integridad de la información.\n",
+                  "mitigation": "Para proteger esta comunicación se debe emplear TLS 1.3 con algoritmos de cifrado fuertes AES-GCM o ChaCha20 (C02), habilitar certificate pinning y autenticación mutua (mTLS) (C01, C04) y registrar todos los eventos de conexión con auditorías automáticas (C05, C06).\nEstas medidas garantizan que el canal de transporte mantenga confidencialidad e integridad y que cualquier intento de manipulación sea detectado de inmediato.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 60,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 2,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              ""
+            ],
+            "id": "6329179d-85c6-40fc-8dc4-0126e966a7db",
+            "source": {
+              "cell": "2eb25a80-2731-432d-bfc0-c64e6a815a22",
+              "port": "2ca7ec50-ebb2-4de8-9ff4-9df84d3d0446"
+            },
+            "target": {
+              "cell": "c049f39b-eac0-47f9-9520-8e817dbc4e4a",
+              "port": "31871fcf-a2e7-4dad-baa9-5dc05c421b37"
+            },
+            "vertices": [
+              {
+                "x": 884,
+                "y": 550
+              },
+              {
+                "x": 850,
+                "y": 610
+              },
+              {
+                "x": 790,
+                "y": 610
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 528.75,
+              "y": 830
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Cerradura"
+              },
+              "body": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "actor",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "31871fcf-a2e7-4dad-baa9-5dc05c421b37"
+                },
+                {
+                  "group": "right",
+                  "id": "b5cd957a-04d9-43f4-8809-91bec6537922"
+                },
+                {
+                  "group": "bottom",
+                  "id": "2ca7ec50-ebb2-4de8-9ff4-9df84d3d0446"
+                },
+                {
+                  "group": "left",
+                  "id": "5d11f99d-7f7b-4d40-941e-3c19dc952823"
+                }
+              ]
+            },
+            "id": "d9f2fe83-fa45-43b4-bb88-7c4546c98110",
+            "zIndex": 11,
+            "data": {
+              "type": "tm.Actor",
+              "name": "Cerradura",
+              "description": "",
+              "isTrustBoundary": false,
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "providesAuthentication": false,
+              "threats": [
+                {
+                  "id": "99993ab4-aee5-41b3-b785-a06346b5f223",
+                  "title": "Manipulación física o apertura no autorizada",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Spoofing / Spoofing",
+                  "description": "Un atacante con acceso físico o remoto podría manipular la cerradura, alterar su firmware o interceptar comandos inalámbricos para abrir la puerta sin autorización, comprometiendo directamente la seguridad física del hogar.\n",
+                  "mitigation": "Para prevenir esta amenaza se deben integrar *sensores de detección de manipulación (tamper sensors)* (C09) que generen alertas locales y remotas ante cualquier intento de apertura física.\nEl firmware debe estar *firmado digitalmente* y validarse en cada arranque mediante *secure boot* (C09), mientras que todos los comandos enviados por el gateway deben cifrarse bajo *TLS 1.3* (C02).\nAdicionalmente, cada acción de apertura o cierre debe registrarse en *logs inmutables* (C05).\nCon este conjunto se protege tanto la integridad del hardware como la trazabilidad de los eventos de acceso.\n",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 54,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
+            }
+          },
+          {
+            "position": {
+              "x": 318,
+              "y": 560
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Start home"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "a56ee7c0-2336-47d9-92d4-04a4420f50ad",
+            "zIndex": 12,
+            "data": {
+              "type": "tm.Text",
+              "name": "Start home",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 318,
+              "y": 180
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Gateway"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "8d2c01b7-da5c-402c-804e-db9dd8ebaa5d",
+            "zIndex": 13,
+            "data": {
+              "type": "tm.Text",
+              "name": "Gateway",
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 853,
+              "y": 20
+            },
+            "size": {
+              "width": 112.5,
+              "height": 60
+            },
+            "attrs": {
+              "text": {
+                "text": "Internet/Cloud"
+              }
+            },
+            "visible": true,
+            "shape": "td-text-block",
+            "id": "de180600-0e55-4343-9dee-c929f8471a57",
+            "zIndex": 14,
+            "data": {
+              "type": "tm.Text",
+              "name": "Internet/Cloud",
+              "hasOpenThreats": false
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
+          }
+        ],
         "description": "Un sistema de hogar inteligente conecta sensores de movimiento, cámaras de seguridad y cerraduras inteligentes a un servidor en la nube. El usuario interactúa a través de una aplicación móvil."
       },
       {
@@ -4297,6 +5829,6 @@
     ],
     "diagramTop": 5,
     "reviewer": "Jsebastian",
-    "threatTop": 51
+    "threatTop": 60
   }
 }
