@@ -1559,6 +1559,65 @@
         "cells": [
           {
             "position": {
+              "x": 31.999999999998835,
+              "y": -99.9999999999988
+            },
+            "size": {
+              "width": 370,
+              "height": 570
+            },
+            "attrs": {
+              "label": {
+                "text": "Entorno del Paciente"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "1adc202c-d7fe-4812-ad22-ea179606df28",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Entorno del Paciente",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 401.9999999999992,
+              "y": -99.99999999999807
+            },
+            "size": {
+              "width": 620,
+              "height": 570
+            },
+            "attrs": {
+              "label": {
+                "text": "Red Hospitalaria"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "a6d66df7-dabd-4447-a2ee-3019ee51552e",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Red Hospitalaria",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
+            }
+          },
+          {
+            "position": {
               "x": 870,
               "y": 80
             },
@@ -1571,13 +1630,14 @@
                 "text": "Portal web"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -1661,7 +1721,6 @@
               ]
             },
             "id": "7dc00830-936b-4434-9fa5-38dbaaa42de7",
-            "zIndex": 1,
             "data": {
               "type": "tm.Actor",
               "name": "Portal web",
@@ -1669,9 +1728,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "6c624e15-7fbd-44ba-b5a6-809bb8acae5a",
+                  "title": "Falta de trazabilidad de acciones en el portal",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Los especialistas podrían negar la consulta o modificación de un expediente médico si no hay registros firmados o logs auditables.",
+                  "mitigation": "C22 Logs firmados digitalmente y trazabilidad por usuario\nC23 Sincronización horaria NTP segura\nC24 Almacenamiento protegido de auditorías (SIEM)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 48,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "repudiation": 1
+              }
             }
           },
           {
@@ -1688,13 +1765,14 @@
                 "text": "nube analisis"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -1778,7 +1856,6 @@
               ]
             },
             "id": "3b4685a0-a7ac-4980-aba9-1689804e5cd2",
-            "zIndex": 2,
             "data": {
               "type": "tm.Actor",
               "name": "nube analisis",
@@ -1786,9 +1863,23 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "5ea65010-44ff-40ad-8091-62f4d01bc249",
+                  "title": "New STRIDE threat",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": true,
+                  "number": 45,
+                  "score": ""
+                }
+              ]
             }
           },
           {
@@ -1805,13 +1896,14 @@
                 "text": "Servidor \nHospitalario"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -1895,7 +1987,6 @@
               ]
             },
             "id": "23d62c7d-f307-41e3-8d5e-10f83bf75cae",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "Servidor \nHospitalario",
@@ -1903,18 +1994,53 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "047d136d-1720-4ad6-90c6-f3a8046f4541",
+                  "title": "Saturación del servidor hospitalario",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Un ataque DoS o tráfico masivo puede dejar inoperante el servidor, impidiendo que dispositivos y médicos accedan a los datos.",
+                  "mitigation": "C28 IDS/IPS hospitalario\nC29 QoS y balanceo de carga\nC30 Redundancia de servidores y tolerancia a fallos",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 49,
+                  "score": "8"
+                },
+                {
+                  "id": "b3e44f5b-08c3-4284-a2c7-89307d832773",
+                  "title": "Escalada desde cuenta de aplicación o servidor",
+                  "status": "Open",
+                  "severity": "Critical",
+                  "type": "Elevation of privilege",
+                  "description": "Vulnerabilidades o configuraciones débiles permiten a un atacante obtener privilegios administrativos sobre sistemas hospitalarios o la nube.",
+                  "mitigation": "C31 RBAC (control de acceso basado en roles)\nC32 Principio de mínimo privilegio\nC33 Hardening del sistema, actualizaciones y monitoreo continuo",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 50,
+                  "score": "9"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
             "position": {
-              "x": 350,
-              "y": -60
+              "x": 160,
+              "y": -40
             },
             "size": {
               "width": 112.5,
@@ -1925,13 +2051,14 @@
                 "text": "Dispositivos \nMedicos"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -2015,7 +2142,6 @@
               ]
             },
             "id": "ba753727-8437-4e5e-ba7d-e2c1b64ec12a",
-            "zIndex": 4,
             "data": {
               "type": "tm.Actor",
               "name": "Dispositivos \nMedicos",
@@ -2023,9 +2149,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "077ec69c-3427-4e08-b827-006c20eac985",
+                  "title": "Suplantación de dispositivo médico BLE",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Un atacante clona o emula un wearable usando una dirección BLE similar o una clave comprometida, enviando datos falsos de signos vitales o métricas médicas al teléfono del paciente.",
+                  "mitigation": "C01 Autenticación mutua BLE (pairing seguro, claves únicas por dispositivo)\nC02 Certificados digitales para dispositivos médicos\nC03 Listas blancas de direcciones BLE confiables",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 41,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -2042,13 +2186,14 @@
                 "text": "Telefono \nPaciente"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 5,
             "ports": {
               "groups": {
                 "top": {
@@ -2132,7 +2277,6 @@
               ]
             },
             "id": "b64a3844-0c36-4756-9ad1-77f0f0d0a8fd",
-            "zIndex": 5,
             "data": {
               "type": "tm.Actor",
               "name": "Telefono \nPaciente",
@@ -2140,105 +2284,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
-            }
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
+              "threats": [
+                {
+                  "id": "437ffa6f-905c-4f7b-99c2-6e2683e75813",
+                  "title": "Suplantación del portal web o API del hospital",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Un atacante crea un portal falso o intercepta la comunicación HTTPS para obtener credenciales de usuario o tokens de sesión.\n",
+                  "mitigation": "C12 MFA para usuarios\nC13 Pinning de certificados en la app móvil\nC14 Detección de dominios falsos (DNSSEC, HSTS)",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 40,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 2,
+                "repudiation": 0
               }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "HTTPS",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "HTTPS"
-            ],
-            "id": "5ec3b2b3-a1f0-4fa6-888a-7a503ee4a7ef",
-            "source": {
-              "cell": "23d62c7d-f307-41e3-8d5e-10f83bf75cae",
-              "port": "00c54d44-49cf-4a9b-88de-2c52f06b9aff"
-            },
-            "target": {
-              "cell": "7dc00830-936b-4434-9fa5-38dbaaa42de7",
-              "port": "cb5334af-a220-4a33-88ed-433a2cfd0372"
-            },
-            "vertices": [
-              {
-                "x": 730,
-                "y": 110
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Bluetooth Low Energy",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "Bluetooth Low Energy"
-            ],
-            "id": "021f3759-730f-41a8-8557-020a3ae9c41f",
-            "source": {
-              "cell": "ba753727-8437-4e5e-ba7d-e2c1b64ec12a",
-              "port": "be18f37d-c6d9-4ae4-88c3-9efa39185bc8"
-            },
-            "target": {
-              "cell": "23d62c7d-f307-41e3-8d5e-10f83bf75cae",
-              "port": "8486d9fe-568b-4cea-9c15-a8fa9bdbd7bb"
             }
           },
           {
@@ -2345,7 +2411,86 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Bluetooth Low Energy",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "7435996e-f0af-4124-bed0-2ac09766676f",
+                  "title": "Fuga de datos médicos por BLE",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Captura (“sniffing”) de paquetes BLE sin cifrar, exponiendo información médica sensible (frecuencia cardíaca, temperatura, presión).",
+                  "mitigation": "C04 Cifrado BLE AES-CCM, manejo seguro de claves, rotación periódica\nC05 Segmentación de red médica y monitoreo IDS BLE",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 42,
+                  "score": "8"
+                },
+                {
+                  "id": "9ccade12-8028-4e68-a9b9-2db05b377fef",
+                  "title": "Interferencia o jamming BLE",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "Ataque de interferencia en la banda BLE o saturación de conexiones impide la transmisión de datos del wearable al teléfono.",
+                  "mitigation": "C06 Detección y aislamiento de canales ruidosos\nC07 Mecanismos de reconexión automática y tolerancia a fallos\nC08 IDS/IPS hospitalario para monitorear disponibilidad",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 43,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 1
+              }
+            },
+            "labels": [
+              "Bluetooth Low Energy"
+            ],
+            "id": "021f3759-730f-41a8-8557-020a3ae9c41f",
+            "source": {
+              "cell": "ba753727-8437-4e5e-ba7d-e2c1b64ec12a",
+              "port": "be18f37d-c6d9-4ae4-88c3-9efa39185bc8"
+            },
+            "target": {
+              "cell": "23d62c7d-f307-41e3-8d5e-10f83bf75cae",
+              "port": "8486d9fe-568b-4cea-9c15-a8fa9bdbd7bb"
+            }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -2366,12 +2511,44 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "4f0b380a-d71b-45ae-b671-05e7b29780e4",
+                  "title": "Manipulación de datos médicos en tránsito",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Un atacante intercepta o modifica los datos entre la app móvil y el servidor hospitalario mediante un ataque MITM, alterando resultados clínicos.",
+                  "mitigation": "C09 TLS 1.3 con verificación estricta de certificados\nC10 Firmas digitales o hashes en los mensajes médicos\nC11 Validación de integridad extremo a extremo",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 38,
+                  "score": "8"
+                },
+                {
+                  "id": "f4e822a7-20b5-455d-928f-1f6ea9500bc2",
+                  "title": "Fuga de credenciales o datos clínicos en tránsito",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Denial of service",
+                  "description": "HTTPS mal configurado o sin TLS fuerte permite que información sensible (historia clínica, usuario, contraseña) sea interceptada.",
+                  "mitigation": "C15 TLS fuerte (1.3), política de expiración de sesiones, cookies seguras (HttpOnly/SameSite)\nC16 Rotación de tokens y autenticación de servidor validada\nPrioridad: Media–Alta",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 39,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 2
+              }
             },
             "labels": [
               "HTTPS/TLS"
@@ -2399,6 +2576,10 @@
                 "y": 110
               },
               {
+                "x": 300,
+                "y": 130
+              },
+              {
                 "x": 280,
                 "y": 150
               }
@@ -2408,7 +2589,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -2429,12 +2611,44 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "81b68ae5-cfb3-488f-a130-65d811bdc41f",
+                  "title": "Manipulación de datos enviados a la nube",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Un atacante con acceso al servidor altera los datos exportados antes de enviarlos al entorno de análisis, afectando la calidad diagnóstica.",
+                  "mitigation": "C20 Hashes de integridad, firma digital antes de transferencia\nC21 Auditorías automáticas y control de versión de registros médicos",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 44,
+                  "score": "6"
+                },
+                {
+                  "id": "387bf09f-0770-4ce9-9da0-6d859fcfe1b4",
+                  "title": "Exposición de datos en tránsito hacia la nube",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Uso de SFTP o HTTPS mal configurado o sin verificación de certificados permite robo de registros médicos por MITM.",
+                  "mitigation": "C17 SFTP/HTTPS con cifrado fuerte (AES-256 + TLS 1.3)\nC18 Autenticación mutua servidor–nube\nC19 Segmentación y aislamiento de la red hospitalaria",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 46,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "SFTP + HTTPS"
@@ -2450,8 +2664,83 @@
             },
             "vertices": [
               {
+                "x": 540,
+                "y": 260
+              },
+              {
                 "x": 560,
                 "y": 290
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "HTTPS",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "45f0fcb4-01d4-4448-9ec3-0737cb721ad3",
+                  "title": "Exposición de datos en el portal web médico",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Falla en HTTPS o sesiones prolongadas expone historiales clínicos de pacientes.",
+                  "mitigation": "C25 HTTPS fuerte (TLS 1.3)\nC26 Cookies seguras (HttpOnly/SameSite)\nC27 Sesiones cortas y rotación de tokens de acceso",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 47,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "HTTPS"
+            ],
+            "id": "5ec3b2b3-a1f0-4fa6-888a-7a503ee4a7ef",
+            "source": {
+              "cell": "23d62c7d-f307-41e3-8d5e-10f83bf75cae",
+              "port": "00c54d44-49cf-4a9b-88de-2c52f06b9aff"
+            },
+            "target": {
+              "cell": "7dc00830-936b-4434-9fa5-38dbaaa42de7",
+              "port": "cb5334af-a220-4a33-88ed-433a2cfd0372"
+            },
+            "vertices": [
+              {
+                "x": 730,
+                "y": 110
               }
             ]
           },
@@ -2469,13 +2758,14 @@
                 "text": "Especialistas"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -2559,7 +2849,6 @@
               ]
             },
             "id": "413c0879-5691-4834-8612-a55ddad58607",
-            "zIndex": 11,
             "data": {
               "type": "tm.Actor",
               "name": "Especialistas",
@@ -2567,9 +2856,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "cdb798e2-99c2-4441-819d-f1ec366c4ee5",
+                  "title": "Robo de credenciales de especialista",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Un atacante obtiene las credenciales del profesional médico y accede a información sensible.",
+                  "mitigation": "C34 MFA en el portal web\nC35 Alertas de inicio de sesión anómalo\nC36 Políticas de contraseñas seguras y rotación",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 51,
+                  "score": "8"
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           }
         ],
@@ -3990,6 +4297,6 @@
     ],
     "diagramTop": 5,
     "reviewer": "Jsebastian",
-    "threatTop": 37
+    "threatTop": 51
   }
 }
